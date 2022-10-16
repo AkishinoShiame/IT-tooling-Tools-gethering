@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Language]
+"InstallLanguage"="0411"
+"InstallLanguageFallback"=hex(7):65,00,6e,00,2d,00,55,00,53,00,00,00,00,00
+"Default"="0411"
+
