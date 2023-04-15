@@ -39,7 +39,8 @@
                                     menucontent = menucontent.split("\n");
                                     for(let menuitem of menucontent){
                                         let element = document.createElement('li');
-                                        element.classList.add('list-group-item list-group-item-action');
+                                        element.classList.add('list-group-item');
+                                        element.classList.add('list-group-item-action');
                                         element.innerHTML = menuitem;
                                         element.setAttribute("data-toggle", "list");
                                         document.getElementById("menu").appendChild(element);
