@@ -1,9 +1,9 @@
 <html>
     <header>
         <title>IT tooling Toos</title>
-        <link rel="stylesheet" href="\css\bootstrap.min.css" >
-        <script src="\js\jquery-3.6.4.slim.min.js" ></script>
-        <script src="\js\bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="/css/bootstrap.min.css" >
+        <script src="/js/jquery-3.6.4.slim.min.js" ></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
         <style>
             @font-face {
                 font-family: 'Migu-1M';
@@ -35,7 +35,7 @@
                         <ul class="list-group" id="menu">
                             <script type="text/javascript">
                                 fetch("https://akishinoshiame.github.io/IT-tooling-Tools-gethering/txt/menu.txt").then( resp=> {
-                                    let menucontent = resp.text().split("\n");
+                                    let menucontent = resp.text();
                                     for(let menuitem of menucontent){
                                         let element = document.createElement('li');
                                         element.classList.add('list-group-item');
