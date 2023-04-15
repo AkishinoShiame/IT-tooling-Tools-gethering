@@ -31,8 +31,20 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-1">
-                        left pan
+                    <div class="col-2">
+                        <ul class="list-group" id="menu">
+                            <script type="text/javascript">
+                                fetch("/txt/menu.txt").then( resp=> {
+                                    let menucontent = resp.text().split("\n");
+                                    for(let menuitem of menucontent){
+                                        let element = document.createElement('li');
+                                        element.classList.add('list-group-item');
+                                        element.innerHTML = menuitem;
+                                        document.getElementById("menu").appendChild(element);
+                                    }
+                                })
+                            </script>
+                        </ul>
                     </div>
                     <div class="col">
                         content
