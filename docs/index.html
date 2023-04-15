@@ -41,6 +41,7 @@
                                         let element = document.createElement('li');
                                         element.classList.add('list-group-item');
                                         element.innerHTML = menuitem;
+                                        element.attr("data-toggle", "list");
                                         document.getElementById("menu").appendChild(element);
                                     }
                                 })
