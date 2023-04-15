@@ -34,10 +34,8 @@
                     <div class="col-2">
                         <ul class="list-group" id="menu">
                             <script type="text/javascript">
-                                fetch("https://akishinoshiame.github.io/IT-tooling-Tools-gethering/txt/menu.txt").then( resp=> {
-                                    let menucontent = resp.text();
-                                    console.log(resp);
-                                    console.log(menucontent);
+                                fetch("https://akishinoshiame.github.io/IT-tooling-Tools-gethering/txt/menu.txt")
+                                .then(response => response.text()).then( menucontent=> {
                                     for(let menuitem of menucontent){
                                         let element = document.createElement('li');
                                         element.classList.add('list-group-item');
