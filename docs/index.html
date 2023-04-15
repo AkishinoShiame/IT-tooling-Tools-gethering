@@ -36,6 +36,7 @@
                             <script type="text/javascript">
                                 fetch("https://akishinoshiame.github.io/IT-tooling-Tools-gethering/txt/menu.txt")
                                 .then(response => response.text()).then( menucontent=> {
+                                    menucontent = menucontent.split("\n");
                                     for(let menuitem of menucontent){
                                         let element = document.createElement('li');
                                         element.classList.add('list-group-item');
