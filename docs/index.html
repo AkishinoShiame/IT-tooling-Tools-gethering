@@ -34,7 +34,7 @@
                     <div class="col-2">
                         <ul class="list-group" id="menu">
                             <script type="text/javascript">
-                                fetch("/txt/menu.txt").then( resp=> {
+                                fetch("https://akishinoshiame.github.io/IT-tooling-Tools-gethering/txt/menu.txt").then( resp=> {
                                     let menucontent = resp.text().split("\n");
                                     for(let menuitem of menucontent){
                                         let element = document.createElement('li');
