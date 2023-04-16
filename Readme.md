@@ -4,6 +4,8 @@
 
 Most of the content are came from internet or maybe some by myself.   
 ウェブサイトのデザインは以下の考えです   
+
+<div>
 +-----------------------------------------------+   
 |      Banner タイトルは fix 　　　　　　　　　　　　 |   
 +-----------------------------------------------+   
@@ -26,6 +28,7 @@ Most of the content are came from internet or maybe some by myself.
 | 新　　|                                        | <br>
 | 。　　|                                        | <br>
 +-----------------------------------------------+ <br>
+</div>
 
 #### これからの作業
 
