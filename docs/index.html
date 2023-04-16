@@ -43,9 +43,13 @@
                                         element.classList.add('list-group-item-action');
                                         element.innerHTML = menuitem;
                                         element.setAttribute("data-toggle", "list");
-                                        element.setAttribute("role", "tab");
                                         document.getElementById("menu").appendChild(element);
                                     }
+                                })
+
+                                $('#menu li').on('click', function (e) {
+                                  e.preventDefault()
+                                  $(this).tab('show')
                                 })
                             </script>
                         </ul>
