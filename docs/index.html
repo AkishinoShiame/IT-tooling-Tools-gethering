@@ -31,9 +31,8 @@
                     </div>
                 </div>
                 <script type="text/javascript">
-                    function contentkawase(event){
-                        let callerID = event.target;
-                        alert("Content is:" + callerID);
+                    function contentkawase(callerID){
+                        alert("Content is:   " + callerID);
                     }
                 </script>
                 <div class="row">
@@ -49,7 +48,7 @@
                                         element.classList.add('list-group-item-action');
                                         element.innerHTML = menuitem;
                                         element.id = menuitem;
-                                        element.setAttribute("onclick", "contentkawase(this);");
+                                        element.setAttribute("onclick", "contentkawase(this.id);");
                                         //element.setAttribute("data-toggle", "list");
                                         document.getElementById("menu").appendChild(element);
                                     }
