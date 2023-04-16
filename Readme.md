@@ -2,11 +2,11 @@
 ### これは自身勉強や仕事以来得た知識や経験のノートです。
 ### In case need to check back or recall my memory use.
 
-Most of the content are came from internet or maybe some by myself. <br>
-ウェブサイトのデザインは以下の考えです<br>
-+-----------------------------------------------+ <br>
-|      Banner タイトルは fix 　　　　　　　　　　　　 | <br>
-+-----------------------------------------------+ <br>
+Most of the content are came from internet or maybe some by myself.   
+ウェブサイトのデザインは以下の考えです   
++-----------------------------------------------+   
+|      Banner タイトルは fix 　　　　　　　　　　　　 |   
++-----------------------------------------------+   
 | 左　　|                                        | <br>
 | の　　|   右手部分の内容は、左から選んで、　         | <br>
 | パ　　|                                        | <br>
