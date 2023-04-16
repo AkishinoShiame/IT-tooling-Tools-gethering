@@ -32,7 +32,7 @@
                 </div>
                 <script type="text/javascript">
                     function contentkawase(callerID){
-                        document.getElementById("title") = getElementById(callerID).innerText;
+                        document.getElementById("title").innerText = document.getElementById(callerID).innerHTML;
                         fetch("https://akishinoshiame.github.io/IT-tooling-Tools-gethering/txt/"+callerID+".txt")
                         .then(txtresp => txtresp.text()).then(naiyou => {
                             document.getElementById("content").innerText = naiyou;
