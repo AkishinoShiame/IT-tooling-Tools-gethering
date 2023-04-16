@@ -32,7 +32,7 @@
                 </div>
                 <div class="row">
                     <div class="col-2">
-                        <ul class="list-group" id="menu">
+                        <ul class="list-group" id="menu" role="tablist">
                             <script type="text/javascript">
                                 fetch("https://akishinoshiame.github.io/IT-tooling-Tools-gethering/txt/menu.txt")
                                 .then(response => response.text()).then( menucontent=> {
@@ -42,14 +42,9 @@
                                         element.classList.add('list-group-item');
                                         element.classList.add('list-group-item-action');
                                         element.innerHTML = menuitem;
-                                        element.setAttribute("data-toggle", "list");
+                                        //element.setAttribute("data-toggle", "list");
                                         document.getElementById("menu").appendChild(element);
                                     }
-                                })
-
-                                $('#menu li').on('click', function (e) {
-                                  e.preventDefault()
-                                  $(this).tab('show')
                                 })
                             </script>
                         </ul>
