@@ -1,0 +1,48 @@
+# WindowsインストールメディアのISO
+
+方法：
+- 公式サイトから[Microsoft](https://www.microsoft.com/ja-jp/software-download/windows10ISO)
+- ESDファイルから変換[TechBench](https://tb.rg-adguard.net/public.php?lang=ja-JP)
+- UUP DUMPサイトからスクリップパック[UUP dump](https://uupdump.net/?lang=ja-jp)
+
+### ESD変換法
+
+ツール: [DECRYPT-MULTI-RELEASE](https://rg-adguard.net/decrypt-multi-release/) [直リンク](https://rg-adguard.net/dl-decrypt)
+1、アーカイブを解凍する。
+2、ダウロードしたESDファイルを中に移動する。
+3、decrypt-ESD.cmdを実行し、必要な選択肢を確認する。
+
+### UUP dump
+
+サイトにアクセスし、必要なバーシュンを選ぶ。
+自分の場合は以下の選択もチェックする。
+- NET Framework 3.5 をISOに統合する(Windowsコンバータのみ)
+- 更新プログラムの統合後にクリーンアップを実行する (Windowsコンバータのみ)
+
+# UEFIモードの場合
+
+UEFIとGPTのインストールUSBメディアに出来るには、古い機械にfat32ファイルシステム形式が必要。
+- fat32には単一ファイルにマックス4G限界があるから、install.winを分割するが必要。
+解決方法はisoファイルをマウントし、wimを4069を割ります。
+
+[Dism /Split-Image](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/split-a-windows-image--wim--file-to-span-across-multiple-dvds?view=windows-11)
+`Dism /Split-Image /ImageFile:D:\sources\install.wim /SWMFile:tmp\install.swm /FileSize:4096`
+
+できましたら、install.swmファイルを全て、ISOにのinstall.wimを切り替える。(UltraISOなどのISO編集プログラムから再作成)。
+
+# USBブートメディアを作成
+
+- [Rufus](https://rufus.ie/ja/)
+注意：一部のバーシュンは`explorer.exe`を一時停止が必要です。(デスクトップが全てスポンポン程度)
+- [ISO to USB](http://www.isotousb.com)
+新式機械にはexFatとしてフォマート、UEFIブートにも可能です。
+
+
+## 最後はUSBを挿す、UEFI + Secure Bootで機械を開き、インストールできます！
+
+- 普通にはお任せ。
+-　必要の場合は最低限 fat32(EFI partition) + NTFS(OS partition)
+
+
+以上！ ＼( ・∇・)ノ
+
