@@ -1,3 +1,56 @@
-1. 先ずはディスクの検査を
-chkdsk /f
-2. dism　で修復
+# Windowsシステムのブート構造
+
+Windowsのブートについて：
+[Overview of the boot process](https://learn.microsoft.com/en-us/windows-hardware/drivers/bringup/boot-and-uefi#overview-of-the-boot-process)
+[Advanced troubleshooting for Windows boot problems](https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting)
+[ブートの流れ](https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/media/windows-boot-issues-troubleshooting/boot-sequence-thumb-expanded.png)
+
+- 基本的には4パートがあります。ハードウェアで選択によって、UEFIかLegacyに選択できます。
+- 1.プレブート: ハードウェアからUEFIモードなら必ずEFI(Fat32)の起動パーティションを探す、Legacyの場合はNTFSにブート関連ファイルから確認。
+- 2.Windows Boot Manager: ここは大体ブートレコードのファイルからOSの所や起動必要なファイルを探す、BCDに設定の確認と実行。
+- 3.Windows OS ローダー: 前ステップから必要な核を確認し、ブートローダーの状況も確認。後ドライバーも。
+- 4.Windows NT OS カーネル: 最後の部分、Windowsカーネルから、正式的にシステムを起動する、ここにはOSイメージが大丈夫かとかが影響される。
+
+### BCD関連
+
+BCDは起動にとって重要なファイル、もしBCDが壊れたらや改造されたら、問題が発生可能。
+個人に薦めのツールは2つである。
+- 公式コマンドツールbcdedit。
+[bcdedit](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/bcdedit)
+[BCDEdit Options Reference](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcd-boot-options-reference)
+- GUI画面がありのEasyBCD。
+[EasyBCD](https://neosmart.net/EasyBCD/)
+
+### ブートローダーの修復
+
+- ここはコマンド一つしかない`BCDBOOT`、大体の場合、このコマンドはBCDと一緒に再構成かのうです。
+- コマンド形式は以下の通り
+`bcdboot C:\Windows /s S: /l ja-jp /f ALL`
+- C:\Windows はWindowsがいる場所、S:はEFIもしくはブートパーティション、/l(エル)は言語、/fはハードウェア種類で、BIOSやUEFIもしくは両方も欲しい場合にALLを変わる。
+[BcdBoot Command](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di?view=windows-11#command-line-options)
+
+## 他の修復
+
+### ディスクの資料修復
+
+- ディスクの検査を
+c: - 修復したいOSの所に変わる。
+chkdsk /f - 検査と修復
+
+### コアファイルの完全性を検査
+sfc /scannow
+
+### dismで深度な修復
+- OSが開いてるの場合
+Dism /Online /Cleanup-Image /ScanHealth
+Dism /Online /Cleanup-Image /CheckHealth
+DISM /Online /Cleanup-image /RestoreHealth
+インストールWimがあるの場合
+Dism /Online /Cleanup-Image /RestoreHealth /Source:c:\test\mount\windows /LimitAccess
+- OSが開けれず(オフライン)の場合
+Dism /Image:C:\offline /Cleanup-Image /RestoreHealth /Source:c:\test\mount\windows
+
+関連資料：
+[Repair a Windows Image](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/repair-a-windows-image)
+
+

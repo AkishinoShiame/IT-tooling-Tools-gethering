@@ -1,5 +1,6 @@
 Windows作成とインストール
+BIOSについて
 Windowsシステム修復
+Linuxシステムのブート
 ディスクDefrag
 Dumpの取り方
-Porta ac consectetur ac
