@@ -35,7 +35,75 @@
                         document.getElementById("title").innerText = document.getElementById(callerID).innerHTML;
                         fetch("https://akishinoshiame.github.io/IT-tooling-Tools-gethering/txt/"+callerID+".txt")
                         .then(txtresp => txtresp.text()).then(naiyou => {
-                            document.getElementById("content").innerText = naiyou; //future consider innerHTML
+                            if (naiyou[0] == "<"){
+                                document.getElementById("content").innerHTML = 
+                                "Guest@AutoScript:~# cat Error-Access-of-This-Page.banner<br>" +
+                                "きゃあっ！<br>" +
+                                "<br>" +
+                                "<br>" +
+                                "``````````````````````_JwAQQsJ,__``````・・・・・・・・・・・・・<br>" +
+                                "```````````````````-JHMyXXwwZyXXMH,````・・・・・・・・・・・・・<br>" +
+                                "````````````````_(JSXwXXXXwuXXuMXXXM,````・・・・・・・・・・・<br>" +
+                                "``````````````__(HuXwrzXrvzZtrOwZZXXM,``・・・・・・・・・・・・<br>" +
+                                "`````````````__(KVwXrwwrrtttwwrwyyMyXM_``・・・・・・・・・・・ <br>" +
+                                "`````````````_~dXwuvrwwrrrOwuuzzuZfVyyb```・・・・・・・・・・・   <br>" +
+                                "````````````__(SZw0vruuzzuzXyZuvuXMpVyM}``・・・・・・・・・・・   <br>" +
+                                "````````````__JwOXVvrXzzXZzXyZuruXMpfVMF``````・・・・・・・・・・   <br>" +
+                                "````````````_(SrwuvzruzwzZzXyZXrzuXpfffH``・・・・・・・・・・・・・   <br>" +
+                                "`````````````dVuzZzuruuzzZuZZZkrwwwffVfM_```````・・・・・・・・・<br>" +
+                                "````````````_KzXX0wuruzwzZuuZZkrrwwffVfM```・・・・・・・・・・・・      <br>" +
+                                "````````````,wzVrwwXzuvwzZuZuykwtwXffySV``・・・・・・・・・・・・・     <br>" +
+                                "````````````,XzVwZwXzuzvuZuXuXykOwXfMXwD_`````・・・・・・・・・・・・・      <br>" +
+                                "``````````__(XzwwOdXXXzzruZXXyyStdHMMk7_``・・・・・・・・・・・・・・・・         <br>" +
+                                "`````````__~JXzzzwwyXXuuzuyMMMy0zdHyM___````・・・・・・・・・・・・・・         <br>" +
+                                "````````___~JuXzuvwyfSuuXyyXfpSwwXHUd/__````````・・・・・・・・・・・・          <br>" +
+                                "````````___~XuXuuuXVpSXMVfpMpMuXXfSrXN_```・・・・・・・・・・・・・・・         <br>" +
+                                "`````````__(kZZZZXyfMZMpyMbpfMXMHM0dHHH+_````・・・・・・・・・・・・・        <br>" +
+                                "````````__(UXyyyyyyyZXbMXMbpMXXHMuXMHMHHHHma,_・・・・・・・・・・・・          <br>" +
+                                "````````(JHXfMVffVfyMMHyMkMVSXMHyXMUHkHH@-dMHHM・・・・・・・・・・・・・         <br>" +
+                                "``````_-MZXMbfppfMHfMkMMkfMfMMMHkMHpMHHHt(Mg%`_7i・・・・・・・・・・・・       <br>" +
+                                "``````idMXMbMMpfMHpMkHpMMpMpMbMHbMHbMbH#<(i#`````z-・・・・・・・・・・       <br>" +
+                                "````_K>dMMiMybMbjbMqmmHbMHbHHbMiMHiMMbM8GM@i`````d~``・・・・・・・・・・・・     <br>" +
+                                "````JK(qpHHMMkSuMHHMHqHpHMMHHHH@HM@H#M#~(M#``````,)・・・・・・・・・・・     <br>" +
+                                "```(HF_HHHHHMHkXHHMMbMkMMbMMHbHHbHHHHM]_Hi$```````z・・・・・・・・・・・     <br>" +
+                                "```dH\_MHHMMMNHHHHfHNHM@MHMiMHHMiMMMM8_(HH!```````,;`・・・・・・・・・・・   <br>" +
+                                "```MM:,MHHMMMHBMHWUHWVOC<<__~_(+((__(J+ggt`````````j・・・・・・・・・・・    <br>" +
+                                "```dN----_((JJJJggQk@HMMHHHMNNMMMMMMMMMHY!`````````_;`・・・・・・・・・・・  <br>" +
+                                "``_MMM@MMMMMHHBYYYYT7TY7?!!`````___`````````````````1``__=?i_・・・・・・・・ <br>" +
+                                "``J````````````````__```````````````````````````````,n=_`_`_1・・・・・・・・ <br>" +
+                                "``t``````````````````````````````````````````````````4__`___+r・・・・・・・  <br>" +
+                                "`_r```````````````````````````````````````````````````j,___(d`・・・・・・・  <br>" +
+                                "`_{```````````````````````````````````````````````___?7^__~(%・・・・・・・   <br>" +
+                                "`Z````````````````````````````````````````````_(j78_______J^・・・・・・・・  <br>" +
+                                "`?=&,````````````````````````````````````<______J_z````__J'・・・・・・・ <br>" +
+                                "`````?h_`````````````````````````````````<______(c!````_J`・・・・・・・・  <br>" +
+                                "``````_b`````````````````````````````````~______~______、・・・・・・・・・   <br>" +
+                                "```````#`````````````````````````````````~_~~___~~~~(Mv``・・・・・・・・・・   <br>" +
+                                "```````H`````````````````````````````````-~~~~~~~~~((M'・・・・・・・・・・   <br>" +
+                                "```````H`````````````````````````````````-~~::~~_:(gY`・・・・・・・・・・・  <br>" +
+                                "```````H``````````````````````````````````(::;<+jgY`・・・・・・・・・・・  <br>" +
+                                "```````K``````````````````````````````````_~<1=d=・・・・・・・・・・・・   <br>" +
+                                "```````G_``````````````````````````````````___(\``・・・・・・・・・・・・・  <br>" +
+                                "<br>" +
+                                "<br>" +
+                                "もう、こんなとこまで見られたら、恥ずかしいでしょ( `ー ́)ノ<br>" +
+                                "あ、そうだそうだ、突然だけどりんなと隠れんぼしない？？ このブログのどこかに隠れるから、絶対見つけてね♪<br>" +
+                                "じゃあ、はじめ～～～ヾ(*・ω・)ﾉ<br>" +
+                                "<br>" +
+                                "ヒントは「犬猿の仲」だよ♡<br>" +
+                                "Credits by FujiTV of Rinna_Blog<br>" +
+                                "<br>" +
+                                "Connection to Server closed.<br>" +
+                                "<br>" +
+                                "<br>" +
+                                "Session stopped<br>" +
+                                "<br>" +
+                                'Server closed network connection due to <b class="text-danger">Access Denied</b> <br>' +
+                                "<br><br><br><br><br><br><br><br><br><br><br>";
+                            }
+                            else{
+                                document.getElementById("content").innerText = naiyou; //future consider innerHTML
+                            }
                         })
                     }
                 </script>
