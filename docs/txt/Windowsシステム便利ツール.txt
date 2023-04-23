@@ -3,4 +3,7 @@ Dumpの取り方: WinDbg
 プロセスの確認やrun as: Process Hacker / AdvancedRun
 Backup Registery location: C:....
 起動用： MAS
-
+システムdump： BlueScreen View // LiveKd
+ファイル観覧：　Explorer++
+CRC count: https://windowsloop.com/add-hash-calculator-to-right-click-context-menu/
+プロセスDump: ProcDump, AppCrashView
