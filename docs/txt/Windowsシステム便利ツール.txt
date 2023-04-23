@@ -1,0 +1,6 @@
+ディスクDefrag: UltraDefrag
+Dumpの取り方: WinDbg
+プロセスの確認やrun as: Process Hacker / AdvancedRun
+Backup Registery location: C:....
+起動用： MAS
+
