@@ -1,0 +1,7 @@
+iexpress C:\Windows\System32\iexpress.exe
+IExpress(x64) C:\Windows\SysWOW64\iexpress.exe
+
+#Code Sign
+
+#Sign executible
+
