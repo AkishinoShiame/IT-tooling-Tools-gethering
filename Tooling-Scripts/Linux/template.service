@@ -1,0 +1,13 @@
+# location /lib/systemd/system/
+
+[Unit]
+Description=Service Description.
+
+[Service]
+# Environment= //use when needed
+Type=forking
+ExecStart=/bin/bash /usr/bin/start-all.sh
+# WorkingDirectory= //use when needed
+
+[Install]
+WantedBy=multi-user.target
